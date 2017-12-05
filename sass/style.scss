@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+body {
+  height: auto;
+  width: auto;
+  max-width: 1200px;
+  background-color: gainsboro; 
+}
+
+h1 {
+  font-family: fantasy;
+  font-size: 35px;
+  color: darkmagenta;
+}
+
+.container {
+  padding: 16px; 
+}
+
+pan {
+  margin: 0 5px; 
+}
+
+.badge {
+  margin: 0 5px;
+  font-size: 1.1em; 
+}
+
+.badge-lg {
+  margin: 5px;
+  font-size: 1.1em; 
+}
+
+.win {
+  color: forestgreen; 
+}
+
+#js-resultsTableElement {
+  font-family: 'Lato', sans-serif;
+  color: black; 
+}
+
+.btn {
+  margin: 0 5px;
+	font-size: 22px;
+  background-color: khaki; 
+}

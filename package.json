@@ -1,0 +1,37 @@
+{
+  "name": "zadanie-7.3.1",
+  "version": "1.0.0",
+  "description": "https://gelu4.github.io/zadanie-7.3.1/",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:html && npm run test:js",
+    "test:html": "glob-run nu-html-checker *.html",
+    "test:js": "glob-run jshint js/*.js",
+    "build": "npm run build:rimraf && npm run build:sass && npm run build:autoprefixer && npm run test",
+    "build:rimraf": "rimraf css/*.css",
+    "build:sass": "sass --sourcemap=none --update sass:css",
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "watch": "parallelshell \"npm run watch:sass\" \"npm run watch:autoprefixer\" \"npm run watch:browsersync\" ",
+    "watch:sass": "sass --watch sass:css",
+    "watch:autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css",
+    "watch:browsersync": "node_modules/.bin/browser-sync start --server --files\" \"css/*.css\" \"*.html\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gelu4/zadanie-7.3.1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gelu4/zadanie-7.3.1/issues"
+  },
+  "homepage": "https://github.com/gelu4/zadanie-7.3.1#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "glob-run": "^0.1.6",
+    "jshint": "^2.9.5",
+    "onchange": "^3.2.1",
+    "rimraf": "^2.6.2"
+  }
+}
